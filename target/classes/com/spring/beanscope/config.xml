@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<context:component-scan
+		base-package="com.spring.beanscope "></context:component-scan>
+		
+		
+		<bean class="com.spring.beanscope.Emp" name="employee" scope="prototype"></bean>
+
+	<util:list list-class="java.util.ArrayList" id="ad">
+		<value>bhilai</value>
+		<value>korba</value>
+		<value>raipur</value>
+	</util:list>
+
+
+	<util:set set-class="java.util.HashSet" id="ph">
+
+		<value>8815778226</value>
+		<value>7987902378</value>
+		<value>8269694138</value>
+
+	</util:set>
+
+
+</beans>
